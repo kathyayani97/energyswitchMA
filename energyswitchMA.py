@@ -1,15 +1,15 @@
 import requests
 import json
 
-zipcode_data = [['01603','1'],['01772','2'],['01013','3'],['01420','4'],['01420','5']]
+zipcode_data = [['01603','1'],['01772','1'],['01772','2'],['01013','4'],['01420','5']]
 
-for info in zipcode_data:
+for each_zipcode in zipcode_data:
     parameters = {
             "customerClassId": "1",
-            "distributionCompanyId": info[1],
+            "distributionCompanyId": each_zipcode[1],
             "distributionCompanyName": "",
             "monthlyUsage": 600,
-            "zipCode": info[0]
+            "zipCode": each_zipcode[0]
             }
 
     main_url = 'https://www.energyswitchma.gov/consumers/compare'
